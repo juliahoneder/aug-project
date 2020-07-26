@@ -6,15 +6,17 @@ using Vuforia;
 
 public class MegaCreditUp : MonoBehaviour, IVirtualButtonEventHandler
 {
-    public int initialCredit = 20;
+    private int initialMegaCredit = InitValues.initialMegaCredit;
+    private int currentMegaCredit;
     public int productionCredit = 1;
-    private int currentCredit = 20;
     private int stepSize = 1;
     private int frameCounter = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        currentMegaCredit = InitValues.currentMegaCredit;
+
         GameObject virtualButtonMegaCreditUp = GameObject.Find("MegaCreditUp");
         virtualButtonMegaCreditUp.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
     }
@@ -27,15 +29,17 @@ public class MegaCreditUp : MonoBehaviour, IVirtualButtonEventHandler
 
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
-        UnityEngine.Debug.Log("Button pressed");
-        UnityEngine.Debug.Log(currentCredit);
+        currentMegaCredit = InitValues.currentMegaCredit;
 
-        if (frameCounter > 5)
+        UnityEngine.Debug.Log("Button pressed");
+        UnityEngine.Debug.Log("UP: " + InitValues.currentMegaCredit);
+       
+        if (frameCounter > 100)
         {
             TextMesh creditText = GameObject.Find("MegaCreditText").GetComponent<TextMesh>();
-            int newCredit = currentCredit + stepSize;
+            int newCredit = currentMegaCredit + stepSize;
 
-            currentCredit = newCredit;
+            InitValues.currentMegaCredit = newCredit;
             creditText.text = newCredit.ToString();
 
             frameCounter = 0;

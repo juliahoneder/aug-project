@@ -5,12 +5,19 @@ using UnityEngine;
 
 public class InitValues : MonoBehaviour
 {
-    public int initialMegaCredit = 20;
-    public int initialSteel = 0;
-    public int initialTitanium = 0;
-    public int initialPlant = 0;
-    public int initialEnergy = 0;
-    public int initialHeat = 0;
+    public static int initialMegaCredit = 20;
+    public static int initialSteel = 0;
+    public static int initialTitanium = 0;
+    public static int initialPlant = 0;
+    public static int initialEnergy = 0;
+    public static int initialHeat = 0;
+
+    public static int currentMegaCredit = initialMegaCredit;
+    public static int currentSteel = initialSteel;
+    public static int currentTitanium = initialTitanium;
+    public static int currentPlant = initialPlant;
+    public static int currentEnergy = initialEnergy;
+    public static int currentHeat = initialHeat;
 
     // Start is called before the first frame update
     void Start()
