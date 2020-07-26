@@ -31,10 +31,8 @@ public class MegaCreditDown : MonoBehaviour, IVirtualButtonEventHandler
     {
         currentMegaCredit = InitValues.currentMegaCredit;
 
-        UnityEngine.Debug.Log("Button pressed");
-        UnityEngine.Debug.Log("DOWN: " + currentMegaCredit);
 
-        if (currentMegaCredit > 1 && frameCounter > 100)
+        if (currentMegaCredit >= 1 && frameCounter > 100)
         {
             TextMesh creditText = GameObject.Find("MegaCreditText").GetComponent<TextMesh>();
             int newCredit = InitValues.currentMegaCredit - stepSize;
@@ -48,8 +46,6 @@ public class MegaCreditDown : MonoBehaviour, IVirtualButtonEventHandler
 
     public void OnButtonReleased(VirtualButtonBehaviour vb)
     {
-        UnityEngine.Debug.Log("Button released");
-
         frameCounter = 0;
     }
 }
