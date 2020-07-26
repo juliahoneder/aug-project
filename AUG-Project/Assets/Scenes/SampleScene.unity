@@ -4295,6 +4295,7 @@ GameObject:
   - component: {fileID: 1340321555}
   - component: {fileID: 1340321554}
   - component: {fileID: 1340321553}
+  - component: {fileID: 1340321557}
   m_Layer: 0
   m_Name: MegaCreditUp
   m_TagString: Untagged
@@ -4409,6 +4410,20 @@ MonoBehaviour:
     e32: 0
     e33: 1
   mPrevParent: {fileID: 1579365139}
+--- !u!114 &1340321557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340321551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc86cdd785972444a8d96299e7b8030a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialCredit: 20
+  productionCredit: 1
 --- !u!43 &1421207326
 Mesh:
   m_ObjectHideFlags: 0
