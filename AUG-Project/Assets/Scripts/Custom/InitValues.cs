@@ -27,27 +27,27 @@ public class InitValues : MonoBehaviour
     public void setValues()
     {
         // MegaCredit
-        TextMesh megaCreditText = GameObject.Find("MegaCreditText").GetComponent<TextMesh>(); ;
+        TextMesh megaCreditText = GameObject.Find("MegaCreditText").GetComponent<TextMesh>();
         megaCreditText.text = initialMegaCredit.ToString();
 
         // Steel
-        TextMesh steelText = GameObject.Find("SteelText").GetComponent<TextMesh>(); ;
+        TextMesh steelText = GameObject.Find("SteelText").GetComponent<TextMesh>();
         steelText.text = initialSteel.ToString();
 
         // Titanium
-        TextMesh titaniumText = GameObject.Find("TitaniumText").GetComponent<TextMesh>(); ;
+        TextMesh titaniumText = GameObject.Find("TitaniumText").GetComponent<TextMesh>();
         titaniumText.text = initialTitanium.ToString();
 
         // Plant
-        TextMesh plantText = GameObject.Find("PlantText").GetComponent<TextMesh>(); ;
+        TextMesh plantText = GameObject.Find("PlantText").GetComponent<TextMesh>();
         plantText.text = initialPlant.ToString();
 
         // Energy
-        TextMesh energyText = GameObject.Find("EnergyText").GetComponent<TextMesh>(); ;
+        TextMesh energyText = GameObject.Find("EnergyText").GetComponent<TextMesh>();
         energyText.text = initialEnergy.ToString();
 
         // Heat
-        TextMesh heatText = GameObject.Find("HeatText").GetComponent<TextMesh>(); ;
+        TextMesh heatText = GameObject.Find("HeatText").GetComponent<TextMesh>();
         heatText.text = initialHeat.ToString();
     }
 }
