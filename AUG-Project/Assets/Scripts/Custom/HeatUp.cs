@@ -24,11 +24,29 @@ public class HeatUp : MonoBehaviour, IVirtualButtonEventHandler
     // Update is called once per frame
     void Update()
     {
+        currentHeat = InitValues.currentHeat;
+
         // check if free trempreature step is available
-        GameObject heatIcon = GameObject.Find("PlantIcon");
-        if (InitValues.currentHeat >= InitValues.freeTempreatureStep)
+        GameObject heatIcon = GameObject.Find("HeatIcon");
+        if (currentHeat >= InitValues.freeTempreatureStep)
         {
             heatIcon.GetComponent<Renderer>().enabled = true;
+
+            int heatMultiplier = currentHeat / InitValues.freeTempreatureStep;
+            GameObject heatIconMultiplier = GameObject.Find("HeatIconMultiplier");
+
+            if (heatMultiplier > 1)
+            {
+                // set multiplier value
+                TextMesh heatIconMultiplierText = heatIconMultiplier.GetComponent<TextMesh>();
+                heatIconMultiplierText.text = heatMultiplier + "x";
+
+                heatIconMultiplier.GetComponent<Renderer>().enabled = true;
+            }
+            else
+            {
+                heatIconMultiplier.GetComponent<Renderer>().enabled = false;
+            }
         }
         else
         {

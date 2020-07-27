@@ -34,7 +34,7 @@ public class PlantDown : MonoBehaviour, IVirtualButtonEventHandler
 
             int plantMultiplier = currentPlant / InitValues.freeGreeneryPlacement;
             GameObject plantIconMultiplier = GameObject.Find("PlantIconMultiplier");
-           
+
             if (plantMultiplier > 1)
             {
                 // set multiplier value
