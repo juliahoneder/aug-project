@@ -33,9 +33,11 @@ public class SteelUp : MonoBehaviour, IVirtualButtonEventHandler
 
         if (frameCounter > 100)
         {
+            // calc new value
             TextMesh steelText = GameObject.Find("SteelText").GetComponent<TextMesh>();
             int newSteel = currentSteel + stepSize;
 
+            // change label
             InitValues.currentSteel = newSteel;
             steelText.text = newSteel.ToString();
 

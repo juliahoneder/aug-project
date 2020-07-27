@@ -33,9 +33,11 @@ public class TitaniumUp : MonoBehaviour, IVirtualButtonEventHandler
 
         if (frameCounter > 100)
         {
+            // calc new value
             TextMesh titaniumText = GameObject.Find("TitaniumText").GetComponent<TextMesh>();
             int newTitanium = currentTitanium + stepSize;
 
+            // change label
             InitValues.currentTitanium = newTitanium;
             titaniumText.text = newTitanium.ToString();
 

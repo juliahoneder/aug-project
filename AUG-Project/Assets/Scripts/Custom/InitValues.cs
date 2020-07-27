@@ -19,10 +19,14 @@ public class InitValues : MonoBehaviour
     public static int currentEnergy = initialEnergy;
     public static int currentHeat = initialHeat;
 
+    public static int freeGreeneryPlacement = 2;
+    public static int freeTempreatureStep = 8;
+
     // Start is called before the first frame update
     void Start()
     {
         this.setValues();
+        this.hideAllIcons();
     }
 
     // Update is called once per frame
@@ -56,5 +60,22 @@ public class InitValues : MonoBehaviour
         // Heat
         TextMesh heatText = GameObject.Find("HeatText").GetComponent<TextMesh>();
         heatText.text = initialHeat.ToString();
+    }
+
+    public void hideAllIcons()
+    {
+        // Plant
+        GameObject plantIconMultiplier = GameObject.Find("PlantIconMultiplier");
+        plantIconMultiplier.GetComponent<Renderer>().enabled = false;
+
+        GameObject plantIcon = GameObject.Find("PlantIcon");
+        plantIcon.GetComponent<Renderer>().enabled = false;
+
+        // Heat
+        GameObject heatIconMultiplier = GameObject.Find("HeatIconMultiplier");
+        heatIconMultiplier.GetComponent<Renderer>().enabled = false;
+
+        GameObject heatIcon = GameObject.Find("HeatIcon");
+        heatIcon.GetComponent<Renderer>().enabled = false;
     }
 }

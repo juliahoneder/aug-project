@@ -33,9 +33,11 @@ public class MegaCreditUp : MonoBehaviour, IVirtualButtonEventHandler
 
         if (frameCounter > 100)
         {
+            // calc new value
             TextMesh creditText = GameObject.Find("MegaCreditText").GetComponent<TextMesh>();
             int newCredit = currentMegaCredit + stepSize;
 
+            // change label
             InitValues.currentMegaCredit = newCredit;
             creditText.text = newCredit.ToString();
 

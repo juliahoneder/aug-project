@@ -24,6 +24,17 @@ public class HeatDown: MonoBehaviour, IVirtualButtonEventHandler
     // Update is called once per frame
     void Update()
     {
+        // check if free trempreature step is available
+        GameObject heatIcon = GameObject.Find("PlantIcon");
+        if (InitValues.currentHeat >= InitValues.freeTempreatureStep)
+        {
+            heatIcon.GetComponent<Renderer>().enabled = true;
+        }
+        else
+        {
+            heatIcon.GetComponent<Renderer>().enabled = false;
+        }
+
         frameCounter++;
     }
 
@@ -33,9 +44,11 @@ public class HeatDown: MonoBehaviour, IVirtualButtonEventHandler
 
         if (currentHeat >= 1 && frameCounter > 100)
         {
+            // calc new value
             TextMesh HeatText = GameObject.Find("HeatText").GetComponent<TextMesh>();
             int newHeat = currentHeat - stepSize;
 
+            // change label
             InitValues.currentHeat = newHeat;
             HeatText.text = newHeat.ToString();
 

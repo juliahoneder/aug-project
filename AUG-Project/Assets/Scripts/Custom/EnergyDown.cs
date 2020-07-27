@@ -33,9 +33,11 @@ public class EnergyDown : MonoBehaviour, IVirtualButtonEventHandler
 
         if (currentEnergy >= 1 && frameCounter > 100)
         {
+            // calc new value
             TextMesh energyText = GameObject.Find("EnergyText").GetComponent<TextMesh>();
             int newEnergy = currentEnergy - stepSize;
 
+            // change label
             InitValues.currentEnergy = newEnergy;
             energyText.text = newEnergy.ToString();
 
