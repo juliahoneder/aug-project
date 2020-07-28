@@ -8,9 +8,9 @@ public class InitValues : MonoBehaviour
     public static int initialMegaCredit = 20;
     public static int initialSteel = 0;
     public static int initialTitanium = 0;
-    public static int initialPlant = 0;
+    public static int initialPlant = 6;
     public static int initialEnergy = 0;
-    public static int initialHeat = 0;
+    public static int initialHeat = 2;
 
     public static int currentMegaCredit = initialMegaCredit;
     public static int currentSteel = initialSteel;
@@ -19,7 +19,7 @@ public class InitValues : MonoBehaviour
     public static int currentEnergy = initialEnergy;
     public static int currentHeat = initialHeat;
 
-    public static int freeGreeneryPlacement = 2;
+    public static int freeGreeneryPlacement = 8;
     public static int freeTempreatureStep = 8;
 
     // Start is called before the first frame update
